@@ -1,0 +1,298 @@
+{
+  "schema": {
+    "options": {},
+    "crud_objects": {
+      "announcements": {
+        "operations": {
+          "announcementList": {
+            "method": "get",
+            "call": {
+              "path": "/v1/announcements"
+            },
+            "processing_options": {
+              "output_field": "data"
+            },
+            "query_parameters": {}
+          }
+        },
+        "parameters": {},
+        "key": "content",
+        "resources": {
+          "name": "string*",
+          "slug": "string*",
+          "excerpt": "string*",
+          "reaction_count": "number*",
+          "published_at": "datetime*",
+          "created_at": "string*",
+          "updated_at": "string*",
+          "idx": "string*",
+          "author": {
+            "name": "string*",
+            "email": "string*",
+            "avatar": "string*",
+            "created_at": "string*",
+            "updated_at": "string*",
+            "idx": "string*"
+          },
+          "categories": [
+            {
+              "name": "string*",
+              "color": "string*",
+              "created_at": "datetime*",
+              "updated_at": "datetime*",
+              "idx": "string*"
+            }
+          ],
+          "ideas": "string*",
+          "is_published": "boolean*"
+        }
+      },
+      "ideas": {
+        "operations": {
+          "ideasList": {
+            "method": "get",
+            "call": {
+              "path": "/v1/ideas"
+            },
+            "processing_options": {
+              "output_field": "data"
+            },
+            "query_parameters": {}
+          }
+        },
+        "parameters": {},
+        "key": "content",
+        "resources": {
+          "slug": "string*",
+          "name": "string*",
+          "description": "string*",
+          "cover_image": "string*",
+          "vote_count": "number*",
+          "comment_count": "number*",
+          "is_private": "boolean*",
+          "is_bug": "boolean*",
+          "show_in_roadmap": "boolean*",
+          "is_archived": "boolean*",
+          "is_shortlisted": "boolean*",
+          "is_completed": "boolean*",
+          "approval_status": "string*",
+          "created_at": "datetime*",
+          "updated_at": "datetime*",
+          "excerpt": "string*",
+          "is_pinned": "boolean*",
+          "idx": "string*",
+          "author": {
+            "idx": "_:string*",
+            "avatar": "_:string*",
+            "name": "_:string*",
+            "email": "_:string*",
+            "created_at": "_:datetime*",
+            "updated_at": "_:datetime*"
+          },
+          "created_by": "string*",
+          "status": {
+            "name": "_:string*",
+            "color": "_:string*",
+            "is_completed": "boolean*",
+            "idx": "_:string*"
+          },
+          "topics": [
+            {
+              "idea_id": "_nim*",
+              "name": "string*",
+              "order": "number*",
+              "idx": "string*"
+            }
+          ]
+        }
+      },
+      "statuses": {
+        "operations": {
+          "statusesList": {
+            "method": "get",
+            "call": {
+              "path": "/v1/statuses"
+            },
+            "processing_options": {
+              "output_field": "data"
+            },
+            "query_parameters": {}
+          }
+        },
+        "parameters": {},
+        "key": "content",
+        "resources": {
+          "name": "string*",
+          "color": "string*",
+          "is_completed": "boolean*",
+          "created_at": "datetime*",
+          "updated_at": "datetime*",
+          "idx": "string*"
+        }
+      },
+      "topics": {
+        "operations": {
+          "topicsList": {
+            "method": "get",
+            "call": {
+              "path": "/v1/topics"
+            },
+            "processing_options": {
+              "output_field": "data"
+            },
+            "query_parameters": {}
+          }
+        },
+        "parameters": {},
+        "key": "content",
+        "resources": {
+          "name": "string*",
+          "is_private": "boolean*",
+          "order": "number*",
+          "created_at": "datetime*",
+          "updated_at": "datetime*",
+          "idx": "string*"
+        }
+      },
+      "followers": {
+        "operations": {
+          "followersList": {
+            "method": "get",
+            "call": {
+              "path": "/v1/followers"
+            },
+            "processing_options": {
+              "output_field": "data"
+            },
+            "query_parameters": {}
+          }
+        },
+        "parameters": {},
+        "key": "content",
+        "resources": {
+          "idx": "string*",
+          "avatar": "string*",
+          "name": "string*",
+          "email": "string*",
+          "created_at": "datetime*",
+          "updated_at": "datetime*"
+        }
+      },
+      "votes": {
+        "operations": {
+          "votesList": {
+            "method": "get",
+            "call": {
+              "path": "/v1/votes"
+            },
+            "processing_options": {
+              "output_field": "data"
+            },
+            "query_parameters": {}
+          }
+        },
+        "parameters": {},
+        "key": "content",
+        "resources": {
+          "created_at": "datetime*",
+          "updated_at": "datetime*",
+          "idx": "string*",
+          "idea": {
+            "slug": "string*",
+            "name": "string*",
+            "description": "string*",
+            "cover_image": "string*",
+            "vote_count": "number*",
+            "comment_count": "number*",
+            "is_private": "boolean*",
+            "is_bug": "boolean*",
+            "show_in_roadmap": "boolean*",
+            "is_archived": "boolean*",
+            "is_shortlisted": "boolean*",
+            "is_completed": "boolean*",
+            "approval_status": "string*",
+            "created_at": "datetime*",
+            "updated_at": "datetime*",
+            "excerpt": "string*",
+            "is_pinned": "boolean*",
+            "idx": "string*",
+            "author": {
+              "idx": "string*",
+              "avatar": "string*",
+              "name": "string*",
+              "email": "string*",
+              "created_at": "datetime*",
+              "updated_at": "datetime*"
+            },
+            "created_by": "string*",
+            "status": {
+              "name": "string*",
+              "color": "string*",
+              "is_completed": "boolean*",
+              "created_at": "datetime*",
+              "updated_at": "datetime*",
+              "idx": "string*"
+            },
+            "topics": [
+              {
+                "name": "string*",
+                "is_private": "boolean*",
+                "order": "number*",
+                "created_at": "datetime*",
+                "updated_at": "datetime*",
+                "idx": "string*"
+              }
+            ]
+          },
+          "voter": {
+            "idx": "string*",
+            "avatar": "string*",
+            "name": "string*",
+            "email": "string*",
+            "created_at": "datetime*",
+            "updated_at": "datetime*"
+          }
+        }
+      }
+    }
+  },
+  "rest": {
+    "config": {
+      "baseUrl": "https://api.frill.co",
+      "get": {
+        "maxPageCount": 500,
+        "query_parameters": {},
+        "pagination": {
+          "mode": "generic",
+          "path": [],
+          "params": {
+            "page": "{page_number}",
+            "pagesize": "500"
+          }
+        }
+      },
+      "authentication": "aeries",
+      "call_handling": "generic",
+      "maxCallsPerMinute": 100,
+      "retry": [
+        {
+          "type": "statusCode",
+          "statusCode": 429
+        },
+        {
+          "type": "connectionError"
+        }
+      ],
+      "test_connection": {
+        "url": "/v1/ideas"
+      },
+      "accept": "application/json",
+      "headers": {
+        "Authorization": "Bearer {client_secret}"
+      }
+    }
+  },
+  "connection": {
+    "items": []
+  }
+}
