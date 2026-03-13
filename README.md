@@ -5,7 +5,8 @@
 
 ## Data Tables
 - Announcements
-- Announcements Categories
+- Announcement Categories
+- Comments
 - Followers
 - Ideas
 - Ideas Topics
